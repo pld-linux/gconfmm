@@ -2,15 +2,15 @@ Summary:	C++ wrappers for GConf
 Summary(pl):	Interfejsy C++ dla GConfa
 Name:		gconfmm
 Version:	2.5.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
 # Source0-md5:	189814a733a18e9707cfad7b495c12f5
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.5.0
-BuildRequires:	glibmm-devel >= 2.3.3
-BuildRequires:	gtkmm-devel >= 2.3.2
+BuildRequires:	GConf2-devel >= 2.5.1
+BuildRequires:	glibmm-devel >= 2.3.4
+BuildRequires:	gtkmm-devel >= 2.3.3
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,8 +26,8 @@ Summary:	Devel files for gconfmm
 Summary(pl):	Pliki nag³ówkowe dla gconfmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	GConf2-devel >= 2.5.0
-Requires:	glibmm-devel >= 2.3.3
+Requires:	GConf2-devel >= 2.5.1
+Requires:	glibmm-devel >= 2.3.4
 
 %description devel
 Devel files for gconfmm.
