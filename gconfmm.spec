@@ -1,16 +1,16 @@
 Summary:	C++ wrappers for GConf
 Summary(pl):	Interfejsy C++ dla GConfa
 Name:		gconfmm
-Version:	2.5.0
-Release:	3
+Version:	2.5.1
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	189814a733a18e9707cfad7b495c12f5
+# Source0-md5:	d0116f2d99e8e65fe61ad074a06fc057
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.5.1
-BuildRequires:	glibmm-devel >= 2.3.4
-BuildRequires:	gtkmm-devel >= 2.3.3
+BuildRequires:	glibmm-devel >= 2.3.5
+BuildRequires:	gtkmm-devel >= 2.3.4
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,9 +25,9 @@ Gnome::Conf.
 Summary:	Devel files for gconfmm
 Summary(pl):	Pliki nag³ówkowe dla gconfmm
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	GConf2-devel >= 2.5.1
-Requires:	glibmm-devel >= 2.3.4
+Requires:	glibmm-devel >= 2.3.5
 
 %description devel
 Devel files for gconfmm.
@@ -39,7 +39,7 @@ Pliki nag³ówkowe dla gconfmm.
 Summary:	Static gconfmm library
 Summary(pl):	Statyczna biblioteka gconfmm
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static gconfmm library.
