@@ -51,6 +51,7 @@ Statyczna biblioteka gconfmm.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub scripts
 %configure \
 	--enable-static
 
