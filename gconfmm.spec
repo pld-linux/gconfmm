@@ -1,16 +1,17 @@
 Summary:	C++ wrappers for GConf
 Summary(pl):	Interfejsy C++ dla GConfa
 Name:		gconfmm
-Version:	2.0.1
-Release:	3
+Version:	2.6.0
+Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	be3a0ddfe4e76c99e1ad78c614e3efb4
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	c1025844c08a67f24fe341ed037c817e
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 1.1.8
-BuildRequires:	gtkmm-devel >= 2.0.1
-BuildRequires:	gtkmm-glib-devel >= 2.0.1
+BuildRequires:	GConf2-devel >= 2.6.0
+BuildRequires:	automake
+BuildRequires:	glibmm-devel >= 2.4.0
+BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,9 +26,9 @@ Gnome::Conf.
 Summary:	Devel files for gconfmm
 Summary(pl):	Pliki nag³ówkowe dla gconfmm
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
-Requires:	GConf2-devel >= 1.1.8
-Requires:	gtkmm-glib-devel >= 2.0.1
+Requires:	%{name} = %{version}-%{release}
+Requires:	GConf2-devel >= 2.6.0
+Requires:	glibmm-devel >= 2.4.0
 
 %description devel
 Devel files for gconfmm.
@@ -39,7 +40,7 @@ Pliki nag³ówkowe dla gconfmm.
 Summary:	Static gconfmm library
 Summary(pl):	Statyczna biblioteka gconfmm
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static gconfmm library.
@@ -72,16 +73,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/libgconfmm-2.0.so.*.*.*
+%attr(755,root,root) %{_libdir}/libgconfmm-2.6.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libgconfmm-2.0.so
-%{_libdir}/libgconfmm-2.0.la
-%{_libdir}/%{name}-2.0
-%{_includedir}/%{name}-2.0
-%{_pkgconfigdir}/%{name}-2.0.pc
+%attr(755,root,root) %{_libdir}/libgconfmm-2.6.so
+%{_libdir}/libgconfmm-2.6.la
+%{_libdir}/%{name}-*
+%{_includedir}/%{name}-2.6
+%{_pkgconfigdir}/%{name}-2.6.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libgconfmm-2.0.a
+%{_libdir}/libgconfmm-2.6.a
