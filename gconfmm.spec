@@ -9,6 +9,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.0/%{name}-%{version}.t
 # Source0-md5:	be3a0ddfe4e76c99e1ad78c614e3efb4
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 1.1.8
+BuildRequires:	gtkmm-devel >= 2.0.1
 BuildRequires:	gtkmm-glib-devel >= 2.0.1
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
