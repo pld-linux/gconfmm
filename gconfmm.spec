@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.0/%{name}-%{version}.tar.bz2
+# Source0-md5:	be3a0ddfe4e76c99e1ad78c614e3efb4
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 1.1.8
 BuildRequires:	automake
