@@ -2,16 +2,18 @@ Summary:	C++ wrappers for GConf
 Summary(pl):	Interfejsy C++ dla GConfa
 Name:		gconfmm
 Version:	2.6.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
 # Source0-md5:	c1025844c08a67f24fe341ed037c817e
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.6.0
+BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glibmm-devel >= 2.4.0
 BuildRequires:	gtkmm-devel >= 2.4.0
+BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -52,7 +54,10 @@ Statyczna biblioteka gconfmm.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub scripts
+%{__libtoolize}
+%{__aclocal} -I scripts
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-static
 
