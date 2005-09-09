@@ -1,18 +1,18 @@
 Summary:	C++ wrappers for GConf
 Summary(pl):	Interfejsy C++ dla GConfa
 Name:		gconfmm
-Version:	2.10.0
+Version:	2.12.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gconfmm/2.10/%{name}-%{version}.tar.bz2
-# Source0-md5:	0f3787ff3f7089698da49b694b5f9155
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gconfmm/2.12/%{name}-%{version}.tar.bz2
+# Source0-md5:	dfd62a95e7675943933b793183649402
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.10.0
+BuildRequires:	GConf2-devel >= 2.12.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	glibmm-devel >= 2.6.0
-BuildRequires:	gtkmm-devel >= 2.6.0
+BuildRequires:	glibmm-devel >= 2.8.0
+BuildRequires:	gtkmm-devel >= 2.8.0
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
