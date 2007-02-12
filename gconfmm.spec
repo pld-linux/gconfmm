@@ -1,5 +1,5 @@
 Summary:	C++ wrappers for GConf
-Summary(pl):	Interfejsy C++ dla GConfa
+Summary(pl.UTF-8):   Interfejsy C++ dla GConfa
 Name:		gconfmm
 Version:	2.16.0
 Release:	2
@@ -21,13 +21,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 C++ wrappers for GConf. All classes are in the Gnome::Conf namespace.
 
-%description -l pl
-Interfejsy C++ dla GConfa. Wszystkie klasy s± w przestrzeni nazw
+%description -l pl.UTF-8
+Interfejsy C++ dla GConfa. Wszystkie klasy sƒÖ w przestrzeni nazw
 Gnome::Conf.
 
 %package devel
 Summary:	Devel files for gconfmm
-Summary(pl):	Pliki nag≥Ûwkowe dla gconfmm
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla gconfmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	GConf2-devel >= 2.14.0
@@ -36,19 +36,19 @@ Requires:	glibmm-devel >= 2.12.0
 %description devel
 Devel files for gconfmm.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe dla gconfmm.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe dla gconfmm.
 
 %package static
 Summary:	Static gconfmm library
-Summary(pl):	Statyczna biblioteka gconfmm
+Summary(pl.UTF-8):   Statyczna biblioteka gconfmm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static gconfmm library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka gconfmm.
 
 %prep
