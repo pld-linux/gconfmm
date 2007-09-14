@@ -1,21 +1,21 @@
 Summary:	C++ wrappers for GConf
 Summary(pl.UTF-8):	Interfejsy C++ dla GConfa
 Name:		gconfmm
-Version:	2.18.0
+Version:	2.20.0
 Release:	1
-License:	GPL
+License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/gconfmm/2.18/%{name}-%{version}.tar.bz2
-# Source0-md5:	0771dde14af1443f9ac142010eb3d403
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gconfmm/2.20/%{name}-%{version}.tar.bz2
+# Source0-md5:	24d7e01104394229f28e32a1dc17c819
 URL:		http://www.gnome.org/
-BuildRequires:	GConf2-devel >= 2.18.0.1
+BuildRequires:	GConf2-devel >= 2.19.1
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	glibmm-devel >= 2.12.7
+BuildRequires:	glibmm-devel >= 2.14.0
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
-Requires:	GConf2 >= 2.18.0.1
-Requires:	glibmm >= 2.12.7
+Requires:	GConf2 >= 2.19.1
+Requires:	glibmm >= 2.14.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,8 +30,8 @@ Summary:	Devel files for gconfmm
 Summary(pl.UTF-8):	Pliki nagłówkowe dla gconfmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	GConf2-devel >= 2.18.0.1
-Requires:	glibmm-devel >= 2.12.7
+Requires:	GConf2-devel >= 2.19.1
+Requires:	glibmm-devel >= 2.14.0
 
 %description devel
 Devel files for gconfmm.
