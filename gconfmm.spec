@@ -12,6 +12,7 @@ BuildRequires:	GConf2-devel >= 2.19.1
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glibmm-devel >= 2.14.0
+BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
 Requires:	GConf2 >= 2.19.1
