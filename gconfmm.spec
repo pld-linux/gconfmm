@@ -1,22 +1,23 @@
 Summary:	C++ wrappers for GConf
 Summary(pl.UTF-8):	Interfejsy C++ dla GConfa
 Name:		gconfmm
-Version:	2.24.0
-Release:	2
+Version:	2.28.2
+Release:	1
 License:	LGPL v2+
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gconfmm/2.24/%{name}-%{version}.tar.bz2
-# Source0-md5:	cd2c3c919dbf8f90f703680d2fa088b2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gconfmm/2.28/%{name}-%{version}.tar.bz2
+# Source0-md5:	cca6d249ab766895e1a180b7a4775733
 URL:		http://www.gnome.org/
 BuildRequires:	GConf2-devel >= 2.19.1
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	glibmm-devel >= 2.14.0
+BuildRequires:	autoconf >= 2.59
+BuildRequires:	automake >= 1:1.9
+BuildRequires:	glibmm-devel >= 2.14.1
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libtool >= 2:1.4d
+BuildRequires:	mm-common >= 0.7.1
 BuildRequires:	pkgconfig
 Requires:	GConf2-libs >= 2.19.1
-Requires:	glibmm >= 2.14.0
+Requires:	glibmm >= 2.14.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,7 +33,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe dla gconfmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	GConf2-devel >= 2.19.1
-Requires:	glibmm-devel >= 2.14.0
+Requires:	glibmm-devel >= 2.14.1
 
 %description devel
 Devel files for gconfmm.
@@ -52,12 +53,24 @@ Static gconfmm library.
 %description static -l pl.UTF-8
 Statyczna biblioteka gconfmm.
 
+%package apidocs
+Summary:	Reference documentation for gconfmm
+Summary(pl.UTF-8):	Szczegółowa dokumentacja dla gconfmm
+Group:		Documentation
+Requires:	gtk-doc-common
+
+%description apidocs
+Reference documentation for gconfmm.
+
+%description apidocs -l pl.UTF-8
+Szczegółowa dokumentacja dla gconfmm.
+
 %prep
 %setup -q
 
 %build
 %{__libtoolize}
-%{__aclocal} -I scripts
+%{__aclocal} -I build
 %{__autoconf}
 %{__automake}
 %configure \
@@ -69,7 +82,8 @@ Statyczna biblioteka gconfmm.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	libdocdir=%{_gtkdocdir}/gconfmm-2.6
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -94,3 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libgconfmm-2.6.a
+
+%files apidocs
+%defattr(644,root,root,755)
+%{_gtkdocdir}/gconfmm-2.6
