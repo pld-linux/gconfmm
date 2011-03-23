@@ -2,7 +2,7 @@ Summary:	C++ wrappers for GConf
 Summary(pl.UTF-8):	Interfejsy C++ dla GConfa
 Name:		gconfmm
 Version:	2.28.2
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gconfmm/2.28/%{name}-%{version}.tar.bz2
@@ -85,6 +85,8 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	libdocdir=%{_gtkdocdir}/gconfmm-2.6
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -100,7 +102,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgconfmm-2.6.so
-%{_libdir}/libgconfmm-2.6.la
 %{_libdir}/%{name}-2.6
 %{_includedir}/%{name}-2.6
 %{_pkgconfigdir}/%{name}-2.6.pc
