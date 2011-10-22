@@ -14,7 +14,7 @@ BuildRequires:	automake >= 1:1.9
 BuildRequires:	glibmm-devel >= 2.14.1
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libtool >= 2:1.4d
-BuildRequires:	mm-common >= 0.7.1
+BuildRequires:	mm-common >= 0.9.5
 BuildRequires:	pkgconfig
 Requires:	GConf2-libs >= 2.19.1
 Requires:	glibmm >= 2.14.1
