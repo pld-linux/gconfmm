@@ -2,7 +2,7 @@ Summary:	C++ wrappers for GConf
 Summary(pl.UTF-8):	Interfejsy C++ dla GConfa
 Name:		gconfmm
 Version:	2.28.3
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gconfmm/2.28/%{name}-%{version}.tar.bz2
@@ -58,6 +58,9 @@ Summary:	Reference documentation for gconfmm
 Summary(pl.UTF-8):	Szczegółowa dokumentacja dla gconfmm
 Group:		Documentation
 Requires:	gtk-doc-common
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 Reference documentation for gconfmm.
