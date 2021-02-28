@@ -58,9 +58,7 @@ Summary:	Reference documentation for gconfmm
 Summary(pl.UTF-8):	Szczegółowa dokumentacja dla gconfmm
 Group:		Documentation
 Requires:	gtk-doc-common
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 Reference documentation for gconfmm.
